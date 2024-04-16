@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/4bb4dfed16.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,9 +20,18 @@
                 <li><a href="#sobremim">Sobre Mim</a></li>
                 <li><a href="#">Projetos</a></li>
                 <li><a href="#">Especialidades</a></li>
-                <li><a href="#">Contato</a></li>
-        </ul>
+                <li><a href="https://gabriellsalvador.github.io/formulario-v2/" target="_blank">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="abrirMenu()">
+                <i class="fa-solid fa-bars hamburger"></i>
+            </div>
         </nav>
+        <menu class="menu-mobile">
+            <a href="#sobremim" class="link">Sobre mim</a>
+            <a href="#" class="link">Projetos</a>
+            <a href="#" class="link">Especialidades</a>
+            <a href="https://gabriellsalvador.github.io/formulario-v2/" target="_blank" class="link">Contato</a>
+        </menu>
     </section><!-- section navbar-->
     <section class="home" id="inicio">
         <div class="home-content">
@@ -56,5 +66,6 @@
             </div>
         </div>
     </section>
+    <script src="index.js"></script>
 </body>
 </html>

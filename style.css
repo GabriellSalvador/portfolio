@@ -11,14 +11,18 @@
         padding: 0;
         box-sizing: border-box;
 }
+
 /* BACKGROUND */
+
 body {
-    background-image: url(p3-bg.png), linear-gradient(to bottom, #2a7dfb 50%, #5890eb);
+    background-image: url(p3-edge-2.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: #50a3fc;
 }
 
 /*LOGO*/
+
 .logo {
     max-width: 70px;
     cursor: pointer;
@@ -44,7 +48,7 @@ body {
     transition: .2s;
 }
 .navegation a:hover{
-    color: #2b7bfb;
+    color: #18458d;
     transform: scale(1.05);
 }
 .navegation ul{
@@ -64,9 +68,59 @@ body {
     justify-content:space-between;
     align-items: center;
     z-index: 100;
-    padding: 10px;
+    padding: 30px;
+
 }
 
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 30px;
+}
+
+.menu-mobile {
+    position: fixed;
+    height: calc(100vh - 104px);
+    top: 104px;
+    right: 0;
+    backdrop-filter: blur(5px);
+    transition: all .4s;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 70px;
+    width: 50%;
+}
+
+.menu-mobile a {
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+}
+
+/*MOBILE MENU*/
+
+@media(max-width:768px){
+    body{
+        background-image: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .links {
+        display: none;
+    }
+    .menu-mobile.active {
+        transform: translateX(0);
+    }
+    .navbar {
+        backdrop-filter: blur(5px);
+    }
+}
 
 /* BANNER */ 
 
